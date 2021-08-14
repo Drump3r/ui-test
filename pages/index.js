@@ -2,6 +2,7 @@ import NavBar from "../components/layout/NavBar";
 import Header from "../components/layout/Header";
 import Head from "next/head";
 import Footer from "../components/layout/Footer";
+import Item from "../components/Item";
 
 export default function Home() {
   return (
@@ -43,7 +44,7 @@ export default function Home() {
 
         <main role="main">
           {/* <!-- Start: Implementation --> */}
-          👉 Your code goes here 👈
+          <Item />
           {/* <!-- End: Implementation --> */}
         </main>
         <aside
