@@ -4,15 +4,15 @@ import React from "react";
 export default function Header() {
   return (
     <header className="hero">
-      <Image
+      <img
         className="hero__background"
         srcSet="/assets/img/pope-francis.png 750w, /assets/img/pope-francis.@2x.png 1440w"
         sizes="(min-width: 750px) 1440px, 100vw"
         src="/assets/img/pope-francis.png"
         alt="Pope Francis"
         width={600}
-        height={436}
-        layout="fill"
+        height={435}
+        // layout="fill"
       />
 
       <div className="max-centered">
@@ -48,7 +48,7 @@ export default function Header() {
             <p className="featured-card__cta">What’s Your Veredict?</p>
             <div className="featured-card__buttons">
               <button className="icon-button" aria-label="thumbs up">
-                <Image
+                <img
                   src="/assets/img/thumbs-up.svg"
                   alt="thumbs up"
                   width={16}
@@ -56,7 +56,7 @@ export default function Header() {
                 />
               </button>
               <button className="icon-button" aria-label="thumbs down">
-                <Image
+                <img
                   src="/assets/img/thumbs-down.svg"
                   alt="thumbs down"
                   width={16}
