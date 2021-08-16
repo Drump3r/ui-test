@@ -28,9 +28,13 @@ function ImageIcon({ name }) {
   return null;
 }
 
-function VoteIcon({ name }) {
+function VoteIcon({ name, onClick }) {
   return (
-    <button type="button" className={`${styles.button} ${styles[name]}`}>
+    <button
+      type="button"
+      className={`${styles.button} ${styles[name]}`}
+      onClick={onClick}
+    >
       <ImageIcon name={name} />
     </button>
   );
@@ -38,6 +42,7 @@ function VoteIcon({ name }) {
 
 VoteIcon.propTypes = {
   name: PropTypes.oneOf(["positive", "negative"]).isRequired,
+  onClick: PropTypes.func,
 };
 
 export default VoteIcon;

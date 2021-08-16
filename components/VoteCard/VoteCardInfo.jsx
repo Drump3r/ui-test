@@ -8,13 +8,14 @@ import {
 
 import styles from "../../styles/components/VoteCard/VoteCardInfo.module.scss";
 
-function VoteCardInfo({ name, description, lastUpdated, category }) {
+function VoteCardInfo({ name, description, lastUpdated, category, savedText }) {
   return (
     <div className={styles.container}>
       <h3 className={styles.title}>{truncateText(name, 21)}</h3>
       <p className={styles.description}>{truncateText(description, 63)}</p>
       <small className={styles.date}>
-        {getDateDistance(lastUpdated)} in {toTitleCase(category)}
+        {savedText ||
+          `${getDateDistance(lastUpdated)} in ${toTitleCase(category)}`}
       </small>
     </div>
   );
