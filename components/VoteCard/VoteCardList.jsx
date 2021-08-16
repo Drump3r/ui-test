@@ -1,29 +1,22 @@
 import React from "react";
-import { data } from "../../public/assets/data.json";
+// import { data } from "../../public/assets/data.json";
 import VoteCard from "./VoteCard";
 import styles from "../../styles/components/VoteCard/VoteCardList.module.scss";
+import votesApi from "../../utils/api/votesApi";
 
-export default function VoteCardList() {
+function VoteCardList({ votes }) {
   return (
     <>
       <h2 className={styles.title}>Previous Rulings</h2>
       <div className={styles.container}>
         <div className={styles.scroll}>
-          {data?.map(
-            ({ picture, name, description, votes, category, lastUpdated }) => (
-              <VoteCard
-                key={name}
-                picture={picture}
-                name={name}
-                description={description}
-                votes={votes}
-                category={category}
-                lastUpdated={lastUpdated}
-              />
-            )
-          )}
+          {votes?.map((data) => (
+            <VoteCard key={data.name} data={data} />
+          ))}
         </div>
       </div>
     </>
   );
 }
+
+export default VoteCardList;

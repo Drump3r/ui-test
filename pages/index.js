@@ -3,8 +3,9 @@ import NavBar from "../components/layout/NavBar";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import VoteCardList from "../components/VoteCard/VoteCardList";
+import votesApi from "../utils/api/votesApi";
 
-export default function Home() {
+function Home({ votes }) {
   return (
     <>
       <Head>
@@ -45,7 +46,7 @@ export default function Home() {
         <main role="main">
           {/* <!-- Start: Implementation --> */}
 
-          <VoteCardList />
+          <VoteCardList votes={votes} />
           {/* <!-- End: Implementation --> */}
         </main>
         <aside
@@ -76,3 +77,14 @@ export default function Home() {
     </>
   );
 }
+
+export async function getServerSideProps(context) {
+  const votes = await votesApi.findAll();
+  return {
+    props: {
+      votes,
+    }, // will be passed to the page component as props
+  };
+}
+
+export default Home;
