@@ -1,8 +1,8 @@
+import Head from "next/head";
 import NavBar from "../components/layout/NavBar";
 import Header from "../components/layout/Header";
-import Head from "next/head";
 import Footer from "../components/layout/Footer";
-import Item from "../components/Item";
+import VoteCardList from "../components/VoteCard/VoteCardList";
 
 export default function Home() {
   return (
@@ -44,7 +44,8 @@ export default function Home() {
 
         <main role="main">
           {/* <!-- Start: Implementation --> */}
-          <Item />
+
+          <VoteCardList />
           {/* <!-- End: Implementation --> */}
         </main>
         <aside
@@ -57,7 +58,7 @@ export default function Home() {
             sizes="(min-width: 750px) 1440px, 100vw"
             className="banner__background"
             src="assets/img/bg-people.png"
-            alt
+            alt="People"
             role="none"
           />
           <div className="banner__left">

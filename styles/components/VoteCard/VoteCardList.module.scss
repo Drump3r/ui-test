@@ -1,0 +1,16 @@
+.title {
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: #464646;
+  margin-bottom: 2rem;
+}
+.container {
+  display: flex;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+.scroll {
+  display: flex;
+  flex-wrap: nowrap;
+}

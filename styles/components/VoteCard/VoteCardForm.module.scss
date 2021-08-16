@@ -1,0 +1,17 @@
+.form {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.button {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  outline: none;
+  padding: 10px 15px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-right: 34px;
+}

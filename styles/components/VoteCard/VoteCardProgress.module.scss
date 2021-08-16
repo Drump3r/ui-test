@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  font-size: 1.5rem;
+  color: var(--color-white);
+}
+.positive {
+  background-color: rgba(60, 187, 180, 0.6);
+  padding-left: 12px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+}
+.negative {
+  background-color: rgba(249, 173, 29, 0.6);
+  padding-right: 12px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+}
