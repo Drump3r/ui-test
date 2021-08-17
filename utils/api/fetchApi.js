@@ -1,9 +1,9 @@
 import axios from "axios";
-// import { apiUrl } from "../../server/configEnv";
+import publicEnv from "../publicEnv";
 
-const apiUrl = process.env.API_URL || "http://localhost:3000/";
+// const apiUrl = process.env.API_URL || "http://localhost:3000/";
 const fetchApi = axios.create({
-  baseURL: `${apiUrl}api/`,
+  baseURL: `${publicEnv.apiUrl}api/`,
 });
 
 export default fetchApi;

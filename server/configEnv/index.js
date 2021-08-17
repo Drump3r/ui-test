@@ -5,6 +5,6 @@ const configEnv = {
   dbHost: process.env.DB_HOST,
   dbPort: process.env.DB_PORT,
   dbName: process.env.DB_NAME,
-  apiUrl: process.env.API_URL || "http://localhost:3000/",
+  apiUrl: process.env.NEXT_PUBLIC_API_URL,
 };
 module.exports = configEnv;

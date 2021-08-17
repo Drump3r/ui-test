@@ -9,6 +9,12 @@ function Home({ votes }) {
   return (
     <>
       <Head>
+        <title>Rule of Thumb</title>
+        <meta
+          name="description"
+          content="Rule of Thumb is a crowd sourced court of public opinion where
+              anyone and everyone can speak out and speak freely"
+        />
         <link
           href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap"
           rel="stylesheet"
