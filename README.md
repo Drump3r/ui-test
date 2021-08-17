@@ -19,8 +19,13 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 framework/library/tool used:
+
 Next.js
 SASS with css module
 MongoDB
+
+##Live Demo
+
+[https://ui-test-jet.vercel.app](https://ui-test-jet.vercel.app)
 
 
