@@ -19,17 +19,23 @@ function VoteCardCaption(props) {
     }
   };
   return (
-    <figcaption className={styles.container}>
-      <VoteCardIconResult votes={data.votes} />
+    <figcaption className={`${styles.container} ${styles[props.mode] || ""}`}>
+      <VoteCardIconResult votes={data.votes} mode={props.mode} />
       <VoteCardInfo
         name={data.name}
         description={data.description}
         lastUpdated={data.lastUpdated}
         category={data.category}
         savedText={savedText}
+        mode={props.mode}
       />
-      <VoteCardForm onFinish={handleFinish} _id={data._id} data={props.data} />
-      <VoteCardProgress votes={data.votes} />
+      <VoteCardForm
+        onFinish={handleFinish}
+        _id={data._id}
+        data={props.data}
+        mode={props.mode}
+      />
+      <VoteCardProgress votes={data.votes} mode={props.mode} />
     </figcaption>
   );
 }
@@ -41,6 +47,7 @@ VoteCardCaption.propTypes = {
   lastUpdated: PropTypes.string.isRequired,
   votes: PropTypes.object.isRequired,
   category: PropTypes.string.isRequired,
+  mode: PropTypes.string,
 };
 
 export default VoteCardCaption;

@@ -29,7 +29,10 @@ function VoteCardForm(props) {
   //Disable Vote Now button when no type selected and not success
   const disabledButton = !type && !success;
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form
+      className={`${styles.form} ${styles[props.mode] || ""}`}
+      onSubmit={handleSubmit}
+    >
       {!success && (
         <>
           <VoteIcon name="positive" onClick={() => setType("positive")} />
@@ -46,6 +49,7 @@ function VoteCardForm(props) {
 
 VoteCardForm.propTypes = {
   _id: PropTypes.string,
+  mode: PropTypes.string,
 };
 
 export default VoteCardForm;

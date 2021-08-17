@@ -32,7 +32,7 @@ function VoteIcon({ name, onClick }) {
   return (
     <button
       type="button"
-      className={`${styles.button} ${styles[name]}`}
+      className={`${styles.button} btn-icon ${styles[name]}`}
       onClick={onClick}
     >
       <ImageIcon name={name} />

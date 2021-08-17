@@ -2,3 +2,25 @@
   position: absolute;
   bottom: 175px;
 }
+
+@media all and (min-width: 768px) {
+  .list {
+    bottom: auto;
+    top: 0;
+  }
+}
+
+@media all and (min-width: 1100px) {
+  .list {
+    bottom: auto;
+    top: 0;
+    button {
+      width: 45px;
+      height: 45px;
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}

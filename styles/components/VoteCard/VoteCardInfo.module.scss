@@ -25,3 +25,76 @@
   padding-right: 36px;
   font-size: 1rem;
 }
+
+@media all and (min-width: 768px) {
+  .title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .description {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .date {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .list {
+    width: 339.57px;
+    padding-left: 150px;
+    margin-bottom: 18px;
+    .title {
+      font-size: 2rem;
+      margin-top: 0;
+      padding-left: 0;
+    }
+    .description {
+      padding-left: 0;
+      font-size: 1rem;
+      line-height: 17px;
+    }
+    .date {
+      position: absolute;
+      right: 14px;
+      top: 8px;
+      font-size: 0.85rem;
+      line-height: 1rem;
+      padding-right: 0;
+    }
+  }
+}
+
+@media all and (min-width: 1100px) {
+  .title {
+    font-size: 36px;
+    line-height: 43px;
+  }
+  .description {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .date {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .list {
+    width: 540px;
+    padding-left: 258.36px;
+    margin-bottom: 0;
+    height: calc(100% - 54px);
+    .title {
+      font-size: 36px;
+      line-height: 63px;
+      margin-bottom: 0;
+    }
+    .description {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 0;
+    }
+    .date {
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+}

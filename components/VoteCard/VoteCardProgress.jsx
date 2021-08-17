@@ -4,13 +4,13 @@ import PropTypes from "prop-types";
 
 import styles from "../../styles/components/VoteCard/VoteCardProgress.module.scss";
 
-function VoteCardProgress({ votes }) {
+function VoteCardProgress({ votes, mode }) {
   const { positive, negative } = votes;
   const total = positive + negative;
   const positivePercentage = (positive * 100) / total;
   const negativePercentage = (negative * 100) / total;
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles[mode] || ""}`}>
       <div
         style={{ width: `${positivePercentage}%` }}
         className={styles.positive}
@@ -39,6 +39,9 @@ function VoteCardProgress({ votes }) {
   );
 }
 
-VoteCardProgress.propTypes = { votes: PropTypes.object.isRequired };
+VoteCardProgress.propTypes = {
+  votes: PropTypes.object.isRequired,
+  mode: PropTypes.string,
+};
 
 export default VoteCardProgress;

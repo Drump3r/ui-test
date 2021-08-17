@@ -8,9 +8,16 @@ import {
 
 import styles from "../../styles/components/VoteCard/VoteCardInfo.module.scss";
 
-function VoteCardInfo({ name, description, lastUpdated, category, savedText }) {
+function VoteCardInfo({
+  name,
+  description,
+  lastUpdated,
+  category,
+  savedText,
+  mode,
+}) {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles[mode] || ""}`}>
       <h3 className={styles.title}>{truncateText(name, 21)}</h3>
       <p className={styles.description}>{truncateText(description, 63)}</p>
       <small className={styles.date}>
@@ -26,6 +33,7 @@ VoteCardInfo.propTypes = {
   description: PropTypes.string.isRequired,
   lastUpdated: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
+  mode: PropTypes.string,
 };
 
 export default VoteCardInfo;

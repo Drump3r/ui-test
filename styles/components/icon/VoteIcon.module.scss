@@ -4,6 +4,12 @@
   border: 0;
   outline: none;
   padding: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:focus {
+    border: 2px solid var(--color-white);
+  }
 }
 .positive {
   background-color: #3cbbb4cc;

@@ -4,8 +4,9 @@ import styles from "../../styles/components/VoteCard.module.scss";
 import VoteCardCaption from "./VoteCardCaption";
 
 function VoteCard(props) {
+  const imageSize = props.mode.toLowerCase() === "list" ? "-small" : "";
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} ${styles[props.mode] || ""}`}>
       <figure className={styles.thumbnail}>
         {/*eslint-disable-next-line @next/next/no-img-element*/}
         <img
@@ -14,7 +15,7 @@ function VoteCard(props) {
             props.data.picture
           } 750w, /assets/img/${props.data.picture?.replace(
             /\.png/gi,
-            "@2x.png"
+            `${imageSize}@2x.png`
           )} 1440w`}
           sizes="(min-width: 750px) 1440px, 100vw"
           src={`/assets/img/${props.data.picture}`}
@@ -22,15 +23,7 @@ function VoteCard(props) {
           width={300}
           height={300}
         />
-        <VoteCardCaption
-          _id={props.data._id}
-          name={props.data.name}
-          description={props.data.description}
-          lastUpdated={props.data.lastUpdated}
-          votes={props.data.votes}
-          category={props.data.category}
-          data={props.data}
-        />
+        <VoteCardCaption data={props.data} mode={props.mode} />
       </figure>
     </div>
   );
@@ -42,6 +35,7 @@ VoteCard.propTypes = {
   picture: PropTypes.string.isRequired,
   lastUpdated: PropTypes.string.isRequired,
   votes: PropTypes.object.isRequired,
+  mode: PropTypes.string,
 };
 
 export default VoteCard;
