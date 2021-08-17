@@ -24,7 +24,7 @@ Next.js
 SASS with css module
 MongoDB
 
-##Live Demo
+## Live Demo
 
 [https://ui-test-jet.vercel.app](https://ui-test-jet.vercel.app)
 
@@ -32,7 +32,7 @@ MongoDB
 
 ![Mobile Screenshot](https://media.discordapp.net/attachments/328692261380685824/877112326929657886/Screenshot_2021-08-17-03-50-56-827_com.android.chrome.jpg?width=304&height=676)
 
-##Score Web.Dev
+## Score Web.Dev
 
 [https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fui-test-jet.vercel.app](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fui-test-jet.vercel.app)
 
