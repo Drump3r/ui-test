@@ -92,6 +92,13 @@
     }
   }
   .scroll {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+
+@media all and (min-width: 1081px) {
+  .scroll {
     justify-content: space-between;
     flex-wrap: wrap;
   }
